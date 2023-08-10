@@ -1,0 +1,208 @@
+$Blue1: #06141b;
+$Blue2: #11212d;
+$Blue3: #253745;
+$Blue4: #908400;
+$White1: #9ba8ab;
+$White2: #ccd0cf;
+
+.navBar {
+  height: 8vh;
+  width: 100vw;
+  background-color: $Blue3;
+  color: $White2;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  border-bottom: 1px solid $Blue4;
+  box-sizing: border-box;
+}
+
+.body {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+.chatList {
+  background-color: $Blue1;
+  box-sizing: border-box;
+  border-right: 1px solid $Blue4;
+  width: 20vw;
+  height: 92vh;
+  margin: 0;
+  padding: 0;
+}
+
+.chatListHeader {
+  background-color: $Blue2;
+  color: $White2;
+
+  width: 100%;
+  height: 15%;
+  margin: 0;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.searchInputBar {
+  margin: 15px 0;
+  color: $White2;
+  height: 30px;
+  width: 90%;
+  border: none;
+  border-radius: 15px;
+  padding: 0 15px;
+  background-color: $Blue4;
+}
+.searchInputBar::placeholder {
+    color: $White2
+  }
+.chatListList {
+  background-color: $Blue2;
+  box-sizing: border-box;
+  width: 100%;
+  height: 80%;
+  margin: 0;
+  padding: 10px;
+}
+
+.chatListCard {
+  background-color: $Blue2;
+  color: $White2;
+  width: 100%;
+  height: 15%;
+  margin: 3px 0;
+  border-radius: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+
+.chatListCard:hover {
+  background-color: $Blue3;
+}
+.active {
+  background-color: $Blue3;
+}
+
+.chatListCardAvatar {
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  margin-right: 10px;
+}
+
+.chatBox {
+  background-color: $Blue1;
+  width: 80vw;
+  height: 92vh;
+  margin: 0;
+  padding: 0;
+}
+
+.chatBoxHeader {
+  background-color: $Blue2;
+  color: $White2;
+  width: 100%;
+  height: 10%;
+  margin: 0;
+  padding: 10px 30px;
+  box-sizing: border-box;
+  align-items: center;
+  align-content: center;
+  display: flex;
+}
+
+.chatBoxBox {
+  background-color: $Blue1;
+  width: 100%;
+  height: 80%;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: scroll;
+}
+
+.chatBoxMessageDiv {
+  display: flex;
+  margin: 2px 0;
+  height: max-content;
+}
+.userMessage {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  color: $White2;
+}
+.otherMessage {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  color: $White2;
+}
+.timestamp {
+  justify-content: center;
+  color: $White2;
+}
+.chatBoxMessage {
+  padding: 10px 15px;
+  max-width: 50%;
+  align-items: center;
+  height: max-content;
+}
+.userMessageStyle {
+  background-color: $Blue4;
+  border-radius: 15px 15px 0px 15px;
+}
+.otherMessageStyle {
+  background-color: $Blue3;
+  border-radius: 15px 15px 15px 0px;
+}
+.chatBoxOtherAvatarDiv {
+  border-radius: 15px;
+  display: flex;
+  align-items: flex-end;
+  margin: 5px;
+  box-sizing: border-box;
+}
+.chatBoxOtherAvatar {
+  height: 43px;
+  width: 43px;
+  border-radius: 21.5px;
+  margin: 5px;
+}
+
+.chatBoxFooter {
+  background-color: $Blue1;
+  box-sizing: border-box;
+  width: 100%;
+  height: 10%;
+  margin: 0;
+  padding: 10px;
+}
+.inputBar {
+  height: 80%;
+  width: 80%;
+  border: none;
+  border-radius: 40px;
+  padding: 5px 20px;
+  margin: 0 0.5% 0 5%;
+  background-color: $Blue4;
+}
+.sendButton {
+  height: 100%;
+  width: max-content;
+  padding: 5px 30px;
+  border: none;
+  border-radius: 40px;
+  background-color: $Blue3;
+  color: #ccd0cf;
+}
+
+.sendButton:hover {
+  background-color: $Blue4;
+}

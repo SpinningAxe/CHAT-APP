@@ -1,0 +1,61 @@
+<div class="navBar"></div>
+
+<div class="body">
+  <div class="chatList">
+    <div class="chatListHeader">
+      <h1>Chat</h1>
+      <input
+        type="text"
+        placeholder="Tìm kiếm trên Messenger"
+        class="searchInputBar"
+      />
+    </div>
+    <div class="chatListList">
+      <div
+        *ngFor="let chatUser of chatUserList"
+        class="chatListCard"
+        (click)="setActive(chatUser)"
+      >
+        <img src="{{ chatUser.image }}" class="chatListCardAvatar" />
+        <div>
+          <span style="font-weight: bold">{{ chatUser.username }}</span
+          ><br />
+          <span style="filter: brightness(0.7)">{{
+            chatUser.chatLog[chatUser.chatLog.length-1].message
+          }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="chatBox">
+    <div class="chatBoxHeader">
+      <img src="{{ activeChatUser.image }}" class="chatListCardAvatar" />
+      <h3 style="margin-left: 5px">{{ activeChatUser.username }}</h3>
+    </div>
+
+    <div class="chatBoxBox" id="ChatBox">
+      <div class="chatBoxMessageDiv" *ngFor="let chatMessage of chatLogForDisplay">
+        <div class="userMessage" *ngIf="chatMessage.fromUser">
+          <div class="chatBoxMessage userMessageStyle">
+            {{ chatMessage.message }}
+          </div>
+        </div>
+        <div class="otherMessage" *ngIf="!chatMessage.fromUser"> 
+          <img
+            src="{{activeChatUser.image}}"
+            class="chatBoxOtherAvatar"
+            *ngIf="chatMessage.lastMessage"
+          />
+          <div *ngIf="!chatMessage.lastMessage" style="width: 53px"></div>
+          <div class="chatBoxMessage otherMessageStyle">
+            {{chatMessage.message}}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="chatBoxFooter">
+      <input type="text" class="inputBar" name="messageInput" (submit)="submit()"/>
+      <button class="sendButton" (click)="submit()">Send</button>
+    </div>
+  </div>
+</div>
